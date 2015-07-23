@@ -1,0 +1,9 @@
+---
+applications:
+- name: sidekiqqer-worker
+  memory: 128M
+  instances: 1
+  services:
+  - redislabs
+  no-route: true
+  command: "bundle exec sidekiq -r ./app.rb"
